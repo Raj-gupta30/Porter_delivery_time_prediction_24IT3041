@@ -92,7 +92,7 @@ CATEGORICAL_FEATURES = [
 @st.cache_resource
 def load_model():
     return keras.models.load_model(
-        os.path.join(BASE_DIR, "delivery_time_model.keras")
+        os.path.join(BASE_DIR, "model.pkl")
     )
 
 
