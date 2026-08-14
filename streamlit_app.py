@@ -302,7 +302,7 @@ page = st.sidebar.radio(
 # ------------------------------------------------------------------
 
 REQUIRED_FILES = [
-    "delivery_time_model.keras",
+    "model.pkl",
     "scaler.pkl",
     "feature_columns.pkl",
     "category_reference.pkl",
