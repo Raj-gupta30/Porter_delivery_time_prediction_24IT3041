@@ -10,7 +10,7 @@ Run:
 
 All required files are expected in the same directory as this file:
 
-    delivery_time_model.keras
+    model.pkl
     scaler.pkl
     feature_columns.pkl
     category_reference.pkl
@@ -91,9 +91,11 @@ CATEGORICAL_FEATURES = [
 
 @st.cache_resource
 def load_model():
-    return keras.models.load_model(
-        os.path.join(BASE_DIR, "model.pkl")
-    )
+    with open(
+        os.path.join(BASE_DIR, "model.pkl"),
+        "rb"
+    ) as f:
+        return pickle.load(f)
 
 
 @st.cache_resource
