@@ -129,7 +129,8 @@ def load_category_reference():
 def load_metrics():
     with open(
         os.path.join(BASE_DIR, "metrics.json"),
-        "r"
+        "r",
+        encoding="utf-8"
     ) as f:
         return json.load(f)
 
